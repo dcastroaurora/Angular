@@ -1,0 +1,17 @@
+<h3>About</h3>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+  Cupiditate autem ducimus corrupti totam sequi commodi odit, obcaecati vel laudantium excepturi, 
+  natus suscipit doloribus? Repellendus debitis nam in illum corrupti tempore.</p>
+
+  <p>{{ datosPersona.nombre }}</p>
+  <p>{{ datosPersona.edad }}</p>
+  <button (click) = executeEvent()>Emitir</button>
+
+  <div *ngFor="let post of posts">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+    <img [src]="imageUrl" alt="">
+    <button [disabled] = "buttonStatus">Mi boton</button>
+    <button [class.activo] = "isActive">Mi boton 2</button>
+    <button (click) = "save($event)">Guardar</button>
+  </div>
